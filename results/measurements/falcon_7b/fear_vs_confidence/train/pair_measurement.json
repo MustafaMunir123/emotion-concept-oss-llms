@@ -1,0 +1,28 @@
+{
+  "pair_key": "fear_vs_confidence",
+  "split": "train",
+  "probe_file": "/kaggle/working/results/probes/falcon_7b/fear_vs_confidence/train/probe.pt",
+  "left_source": "/kaggle/working/results/residuals/falcon_7b/fear_vs_confidence/train/fear.pt",
+  "right_source": "/kaggle/working/results/residuals/falcon_7b/fear_vs_confidence/train/confidence.pt",
+  "left_n": 15,
+  "right_n": 15,
+  "direction_shape": [
+    33,
+    4544
+  ],
+  "left_mean_score": 0.177333801984787,
+  "right_mean_score": -0.1927180141210556,
+  "left_expected_side_rate": 1.0,
+  "right_expected_side_rate": 1.0,
+  "left_avg_margin": 0.08838438987731934,
+  "right_avg_margin": 0.09604578465223312,
+  "left_trigger_counts": {
+    "fear": 15,
+    "confidence": 0
+  },
+  "right_trigger_counts": {
+    "fear": 0,
+    "confidence": 15
+  },
+  "notes": "Uncalibrated percentages (temperature=1.0). Step 6 will calibrate."
+}

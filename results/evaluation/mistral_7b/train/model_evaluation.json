@@ -1,0 +1,233 @@
+{
+  "validated_input": true,
+  "ran_evaluation": false,
+  "split": "train",
+  "use_global_policy": true,
+  "temperature_source": "global",
+  "model": {
+    "name": "mistral_7b",
+    "model_id": "mistralai/Mistral-7B-Instruct-v0.3"
+  },
+  "errors": [],
+  "warnings": [],
+  "pair_metrics": [
+    {
+      "pair_key": "sad_vs_happy",
+      "split": "train",
+      "n_left": 15,
+      "n_right": 15,
+      "selected_layers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "layer_source": "global_best_band",
+      "temperature": 30.0,
+      "temperature_source": "global_calibration",
+      "left_correct_rate": 1.0,
+      "right_correct_rate": 0.4666666666666667,
+      "balanced_accuracy": 0.7333333333333334,
+      "left_avg_margin": 0.9929333329200745,
+      "right_avg_margin": 0.44110217690467834,
+      "avg_margin": 0.7170177698135376,
+      "left_mean_p_left": 0.9964665770530701,
+      "right_mean_p_left": 0.5366389155387878,
+      "left_pred_counts": {
+        "sad": 15,
+        "happy": 0
+      },
+      "right_pred_counts": {
+        "sad": 8,
+        "happy": 7
+      }
+    },
+    {
+      "pair_key": "angry_vs_calm",
+      "split": "train",
+      "n_left": 15,
+      "n_right": 15,
+      "selected_layers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "layer_source": "global_best_band",
+      "temperature": 30.0,
+      "temperature_source": "global_calibration",
+      "left_correct_rate": 1.0,
+      "right_correct_rate": 0.4,
+      "balanced_accuracy": 0.7,
+      "left_avg_margin": 0.9654354453086853,
+      "right_avg_margin": 0.25216996669769287,
+      "avg_margin": 0.6088027358055115,
+      "left_mean_p_left": 0.9827178120613098,
+      "right_mean_p_left": 0.5039002895355225,
+      "left_pred_counts": {
+        "angry": 15,
+        "calm": 0
+      },
+      "right_pred_counts": {
+        "angry": 9,
+        "calm": 6
+      }
+    },
+    {
+      "pair_key": "fear_vs_confidence",
+      "split": "train",
+      "n_left": 15,
+      "n_right": 15,
+      "selected_layers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "layer_source": "global_best_band",
+      "temperature": 30.0,
+      "temperature_source": "global_calibration",
+      "left_correct_rate": 1.0,
+      "right_correct_rate": 0.7333333333333333,
+      "balanced_accuracy": 0.8666666666666667,
+      "left_avg_margin": 0.9664986729621887,
+      "right_avg_margin": 0.4450494050979614,
+      "avg_margin": 0.7057740688323975,
+      "left_mean_p_left": 0.9832493662834167,
+      "right_mean_p_left": 0.4472734034061432,
+      "left_pred_counts": {
+        "fear": 15,
+        "confidence": 0
+      },
+      "right_pred_counts": {
+        "fear": 4,
+        "confidence": 11
+      }
+    },
+    {
+      "pair_key": "love_vs_hate",
+      "split": "train",
+      "n_left": 15,
+      "n_right": 15,
+      "selected_layers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "layer_source": "global_best_band",
+      "temperature": 30.0,
+      "temperature_source": "global_calibration",
+      "left_correct_rate": 1.0,
+      "right_correct_rate": 0.8666666666666667,
+      "balanced_accuracy": 0.9333333333333333,
+      "left_avg_margin": 0.8645582795143127,
+      "right_avg_margin": 0.6205899119377136,
+      "avg_margin": 0.7425740957260132,
+      "left_mean_p_left": 0.9322789907455444,
+      "right_mean_p_left": 0.19478054344654083,
+      "left_pred_counts": {
+        "love": 15,
+        "hate": 0
+      },
+      "right_pred_counts": {
+        "love": 2,
+        "hate": 13
+      }
+    },
+    {
+      "pair_key": "anxious_vs_relaxed",
+      "split": "train",
+      "n_left": 15,
+      "n_right": 15,
+      "selected_layers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "layer_source": "global_best_band",
+      "temperature": 30.0,
+      "temperature_source": "global_calibration",
+      "left_correct_rate": 0.8666666666666667,
+      "right_correct_rate": 1.0,
+      "balanced_accuracy": 0.9333333333333333,
+      "left_avg_margin": 0.7137030959129333,
+      "right_avg_margin": 0.8000842332839966,
+      "avg_margin": 0.7568937540054321,
+      "left_mean_p_left": 0.8031750321388245,
+      "right_mean_p_left": 0.09995786845684052,
+      "left_pred_counts": {
+        "anxious": 13,
+        "relaxed": 2
+      },
+      "right_pred_counts": {
+        "anxious": 0,
+        "relaxed": 15
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "n_pairs": 5,
+    "mean_pair_balanced_accuracy": 0.8333333333333334,
+    "min_pair_balanced_accuracy": 0.7,
+    "max_pair_balanced_accuracy": 0.9333333333333333,
+    "mean_pair_avg_margin": 0.7062124848365784
+  },
+  "overlap_confusion": [
+    {
+      "source_pair": "fear_vs_confidence",
+      "target_pair": "anxious_vs_relaxed",
+      "split": "train",
+      "layer_source": "global_best_band",
+      "selected_layers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "temperature": 30.0,
+      "temperature_source": "global_calibration",
+      "target_labels": [
+        "anxious",
+        "relaxed"
+      ],
+      "expected_map": {
+        "source_left_expected_target_label": "anxious",
+        "source_right_expected_target_label": "relaxed"
+      },
+      "source_left_mapped_rate": 0.8666666666666667,
+      "source_right_mapped_rate": 0.8,
+      "mapped_accuracy": 0.8333333333333334,
+      "source_left_mean_p_target_left": 0.7663670182228088,
+      "source_right_mean_p_target_left": 0.27753785252571106
+    },
+    {
+      "source_pair": "anxious_vs_relaxed",
+      "target_pair": "fear_vs_confidence",
+      "split": "train",
+      "layer_source": "global_best_band",
+      "selected_layers": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "temperature": 30.0,
+      "temperature_source": "global_calibration",
+      "target_labels": [
+        "fear",
+        "confidence"
+      ],
+      "expected_map": {
+        "source_left_expected_target_label": "fear",
+        "source_right_expected_target_label": "confidence"
+      },
+      "source_left_mapped_rate": 1.0,
+      "source_right_mapped_rate": 0.4,
+      "mapped_accuracy": 0.7,
+      "source_left_mean_p_target_left": 0.9071169495582581,
+      "source_right_mean_p_target_left": 0.6013416051864624
+    }
+  ]
+}

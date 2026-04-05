@@ -1,0 +1,28 @@
+{
+  "pair_key": "anxious_vs_relaxed",
+  "split": "train",
+  "probe_file": "/kaggle/working/results/probes/falcon_7b/anxious_vs_relaxed/train/probe.pt",
+  "left_source": "/kaggle/working/results/residuals/falcon_7b/anxious_vs_relaxed/train/anxious.pt",
+  "right_source": "/kaggle/working/results/residuals/falcon_7b/anxious_vs_relaxed/train/relaxed.pt",
+  "left_n": 15,
+  "right_n": 15,
+  "direction_shape": [
+    33,
+    4544
+  ],
+  "left_mean_score": 0.16853304207324982,
+  "right_mean_score": -0.16740480065345764,
+  "left_expected_side_rate": 1.0,
+  "right_expected_side_rate": 1.0,
+  "left_avg_margin": 0.08404059708118439,
+  "right_avg_margin": 0.08348783850669861,
+  "left_trigger_counts": {
+    "anxious": 15,
+    "relaxed": 0
+  },
+  "right_trigger_counts": {
+    "anxious": 0,
+    "relaxed": 15
+  },
+  "notes": "Uncalibrated percentages (temperature=1.0). Step 6 will calibrate."
+}

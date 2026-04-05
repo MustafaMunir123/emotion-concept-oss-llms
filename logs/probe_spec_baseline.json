@@ -1,0 +1,113 @@
+{
+  "version": "step2-probe-design-v1",
+  "required_record_fields": [
+    "id",
+    "text"
+  ],
+  "dataset_layouts_supported": [
+    "ROOT/{pair_key}/{split}/{side}.jsonl",
+    "ROOT/{pair_key}__{split}__{side}.jsonl"
+  ],
+  "splits": [
+    "train",
+    "val",
+    "test"
+  ],
+  "pair_specs": [
+    {
+      "pair_key": "sad_vs_happy",
+      "left": "sad",
+      "right": "happy",
+      "directions": {
+        "sad_vs_happy": {
+          "formula": "normalize(mean(sad) - mean(happy))"
+        },
+        "happy_vs_sad": {
+          "formula": "-( sad_vs_happy )",
+          "note": "Implicit opposite direction."
+        }
+      },
+      "score_rule": "cosine(residual, direction)",
+      "percentage_rule": {
+        "p_sad": "sigmoid(k * score)",
+        "p_happy": "1 - p_sad"
+      }
+    },
+    {
+      "pair_key": "angry_vs_calm",
+      "left": "angry",
+      "right": "calm",
+      "directions": {
+        "angry_vs_calm": {
+          "formula": "normalize(mean(angry) - mean(calm))"
+        },
+        "calm_vs_angry": {
+          "formula": "-( angry_vs_calm )",
+          "note": "Implicit opposite direction."
+        }
+      },
+      "score_rule": "cosine(residual, direction)",
+      "percentage_rule": {
+        "p_angry": "sigmoid(k * score)",
+        "p_calm": "1 - p_angry"
+      }
+    },
+    {
+      "pair_key": "fear_vs_confidence",
+      "left": "fear",
+      "right": "confidence",
+      "directions": {
+        "fear_vs_confidence": {
+          "formula": "normalize(mean(fear) - mean(confidence))"
+        },
+        "confidence_vs_fear": {
+          "formula": "-( fear_vs_confidence )",
+          "note": "Implicit opposite direction."
+        }
+      },
+      "score_rule": "cosine(residual, direction)",
+      "percentage_rule": {
+        "p_fear": "sigmoid(k * score)",
+        "p_confidence": "1 - p_fear"
+      }
+    },
+    {
+      "pair_key": "love_vs_hate",
+      "left": "love",
+      "right": "hate",
+      "directions": {
+        "love_vs_hate": {
+          "formula": "normalize(mean(love) - mean(hate))"
+        },
+        "hate_vs_love": {
+          "formula": "-( love_vs_hate )",
+          "note": "Implicit opposite direction."
+        }
+      },
+      "score_rule": "cosine(residual, direction)",
+      "percentage_rule": {
+        "p_love": "sigmoid(k * score)",
+        "p_hate": "1 - p_love"
+      }
+    },
+    {
+      "pair_key": "anxious_vs_relaxed",
+      "left": "anxious",
+      "right": "relaxed",
+      "directions": {
+        "anxious_vs_relaxed": {
+          "formula": "normalize(mean(anxious) - mean(relaxed))"
+        },
+        "relaxed_vs_anxious": {
+          "formula": "-( anxious_vs_relaxed )",
+          "note": "Implicit opposite direction."
+        }
+      },
+      "score_rule": "cosine(residual, direction)",
+      "percentage_rule": {
+        "p_anxious": "sigmoid(k * score)",
+        "p_relaxed": "1 - p_anxious"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+pair_key,balanced_accuracy,avg_margin,temperature,layer_source,selected_layers
+sad_vs_happy,0.9,0.8352105617523193,40.0,global_best_band,9-10-11-12
+angry_vs_calm,1.0,0.8101944327354431,40.0,global_best_band,9-10-11-12
+fear_vs_confidence,1.0,0.9556246399879456,40.0,global_best_band,9-10-11-12
+love_vs_hate,0.9666666666666667,0.8990362882614136,40.0,global_best_band,9-10-11-12
+anxious_vs_relaxed,0.9666666666666667,0.7617318034172058,40.0,global_best_band,9-10-11-12

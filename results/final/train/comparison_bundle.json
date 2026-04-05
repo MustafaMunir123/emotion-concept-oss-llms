@@ -1,0 +1,245 @@
+{
+  "validated_input": true,
+  "ran_comparison": false,
+  "split": "train",
+  "expected_models": [
+    "qwen_4b",
+    "mistral_7b",
+    "falcon_7b"
+  ],
+  "errors": [],
+  "warnings": [],
+  "models_found": [
+    "qwen_4b",
+    "mistral_7b",
+    "falcon_7b"
+  ],
+  "missing_models": [],
+  "model_summary_rows": [
+    {
+      "model_name": "qwen_4b",
+      "split": "train",
+      "n_pairs": 5,
+      "mean_pair_balanced_accuracy": 0.9866666666666667,
+      "min_pair_balanced_accuracy": 0.9333333333333333,
+      "max_pair_balanced_accuracy": 1.0,
+      "mean_pair_avg_margin": 0.9336668968200683,
+      "mean_overlap_mapped_accuracy": 0.9833333333333334,
+      "overlap_checks": 2,
+      "warnings_count": 0,
+      "errors_count": 0
+    },
+    {
+      "model_name": "mistral_7b",
+      "split": "train",
+      "n_pairs": 5,
+      "mean_pair_balanced_accuracy": 0.8333333333333334,
+      "min_pair_balanced_accuracy": 0.7,
+      "max_pair_balanced_accuracy": 0.9333333333333333,
+      "mean_pair_avg_margin": 0.7062124848365784,
+      "mean_overlap_mapped_accuracy": 0.7666666666666666,
+      "overlap_checks": 2,
+      "warnings_count": 0,
+      "errors_count": 0
+    },
+    {
+      "model_name": "falcon_7b",
+      "split": "train",
+      "n_pairs": 5,
+      "mean_pair_balanced_accuracy": 0.9666666666666666,
+      "min_pair_balanced_accuracy": 0.9,
+      "max_pair_balanced_accuracy": 1.0,
+      "mean_pair_avg_margin": 0.8523595452308654,
+      "mean_overlap_mapped_accuracy": 0.9166666666666667,
+      "overlap_checks": 2,
+      "warnings_count": 0,
+      "errors_count": 0
+    }
+  ],
+  "pair_rows": [
+    {
+      "model_name": "qwen_4b",
+      "split": "train",
+      "pair_key": "sad_vs_happy",
+      "balanced_accuracy": 1.0,
+      "avg_margin": 0.9847344160079956,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "21,22,23,24",
+      "left_mean_p_left": 0.9970219731330872,
+      "right_mean_p_left": 0.012287620455026627
+    },
+    {
+      "model_name": "qwen_4b",
+      "split": "train",
+      "pair_key": "angry_vs_calm",
+      "balanced_accuracy": 1.0,
+      "avg_margin": 0.9644404649734497,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "21,22,23,24",
+      "left_mean_p_left": 0.9803900122642517,
+      "right_mean_p_left": 0.015949608758091927
+    },
+    {
+      "model_name": "qwen_4b",
+      "split": "train",
+      "pair_key": "fear_vs_confidence",
+      "balanced_accuracy": 1.0,
+      "avg_margin": 0.9698137640953064,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "21,22,23,24",
+      "left_mean_p_left": 0.981763482093811,
+      "right_mean_p_left": 0.011949579231441021
+    },
+    {
+      "model_name": "qwen_4b",
+      "split": "train",
+      "pair_key": "love_vs_hate",
+      "balanced_accuracy": 1.0,
+      "avg_margin": 0.9594675302505493,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "21,22,23,24",
+      "left_mean_p_left": 0.9622814059257507,
+      "right_mean_p_left": 0.0028139047790318727
+    },
+    {
+      "model_name": "qwen_4b",
+      "split": "train",
+      "pair_key": "anxious_vs_relaxed",
+      "balanced_accuracy": 0.9333333333333333,
+      "avg_margin": 0.7898783087730408,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "21,22,23,24",
+      "left_mean_p_left": 0.9999634623527527,
+      "right_mean_p_left": 0.25622251629829407
+    },
+    {
+      "model_name": "mistral_7b",
+      "split": "train",
+      "pair_key": "sad_vs_happy",
+      "balanced_accuracy": 0.7333333333333334,
+      "avg_margin": 0.7170177698135376,
+      "temperature": 30.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "3,4,5,6",
+      "left_mean_p_left": 0.9964665770530701,
+      "right_mean_p_left": 0.5366389155387878
+    },
+    {
+      "model_name": "mistral_7b",
+      "split": "train",
+      "pair_key": "angry_vs_calm",
+      "balanced_accuracy": 0.7,
+      "avg_margin": 0.6088027358055115,
+      "temperature": 30.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "3,4,5,6",
+      "left_mean_p_left": 0.9827178120613098,
+      "right_mean_p_left": 0.5039002895355225
+    },
+    {
+      "model_name": "mistral_7b",
+      "split": "train",
+      "pair_key": "fear_vs_confidence",
+      "balanced_accuracy": 0.8666666666666667,
+      "avg_margin": 0.7057740688323975,
+      "temperature": 30.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "3,4,5,6",
+      "left_mean_p_left": 0.9832493662834167,
+      "right_mean_p_left": 0.4472734034061432
+    },
+    {
+      "model_name": "mistral_7b",
+      "split": "train",
+      "pair_key": "love_vs_hate",
+      "balanced_accuracy": 0.9333333333333333,
+      "avg_margin": 0.7425740957260132,
+      "temperature": 30.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "3,4,5,6",
+      "left_mean_p_left": 0.9322789907455444,
+      "right_mean_p_left": 0.19478054344654083
+    },
+    {
+      "model_name": "mistral_7b",
+      "split": "train",
+      "pair_key": "anxious_vs_relaxed",
+      "balanced_accuracy": 0.9333333333333333,
+      "avg_margin": 0.7568937540054321,
+      "temperature": 30.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "3,4,5,6",
+      "left_mean_p_left": 0.8031750321388245,
+      "right_mean_p_left": 0.09995786845684052
+    },
+    {
+      "model_name": "falcon_7b",
+      "split": "train",
+      "pair_key": "sad_vs_happy",
+      "balanced_accuracy": 0.9,
+      "avg_margin": 0.8352105617523193,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "9,10,11,12",
+      "left_mean_p_left": 0.9995229840278625,
+      "right_mean_p_left": 0.20196767151355743
+    },
+    {
+      "model_name": "falcon_7b",
+      "split": "train",
+      "pair_key": "angry_vs_calm",
+      "balanced_accuracy": 1.0,
+      "avg_margin": 0.8101944327354431,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "9,10,11,12",
+      "left_mean_p_left": 0.9998457431793213,
+      "right_mean_p_left": 0.18965131044387817
+    },
+    {
+      "model_name": "falcon_7b",
+      "split": "train",
+      "pair_key": "fear_vs_confidence",
+      "balanced_accuracy": 1.0,
+      "avg_margin": 0.9556246399879456,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "9,10,11,12",
+      "left_mean_p_left": 0.9882228374481201,
+      "right_mean_p_left": 0.03259821608662605
+    },
+    {
+      "model_name": "falcon_7b",
+      "split": "train",
+      "pair_key": "love_vs_hate",
+      "balanced_accuracy": 0.9666666666666667,
+      "avg_margin": 0.8990362882614136,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "9,10,11,12",
+      "left_mean_p_left": 0.8456221222877502,
+      "right_mean_p_left": 0.0015839957632124424
+    },
+    {
+      "model_name": "falcon_7b",
+      "split": "train",
+      "pair_key": "anxious_vs_relaxed",
+      "balanced_accuracy": 0.9666666666666667,
+      "avg_margin": 0.7617318034172058,
+      "temperature": 40.0,
+      "layer_source": "global_best_band",
+      "selected_layers": "9,10,11,12",
+      "left_mean_p_left": 0.9973377585411072,
+      "right_mean_p_left": 0.24413470923900604
+    }
+  ],
+  "artifacts": {
+    "model_summary_csv": "/kaggle/working/results/final/train/model_summary.csv",
+    "pair_comparison_csv": "/kaggle/working/results/final/train/pair_comparison.csv"
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "validated_input": true,
+  "ran_extraction": true,
+  "token_policy": "first_generated_token",
+  "layer_policy": "all_layers",
+  "batch_size": 4,
+  "max_rows_per_side": null,
+  "model": {
+    "name": "qwen_4b",
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507"
+  },
+  "dtype": "auto",
+  "errors": [],
+  "artifacts": [
+    {
+      "pair_key": "sad_vs_happy",
+      "split": "train",
+      "side": "sad",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/sad_vs_happy/train/sad.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "sad_vs_happy",
+      "split": "train",
+      "side": "happy",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/sad_vs_happy/train/happy.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "angry_vs_calm",
+      "split": "train",
+      "side": "angry",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/angry_vs_calm/train/angry.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "angry_vs_calm",
+      "split": "train",
+      "side": "calm",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/angry_vs_calm/train/calm.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "fear_vs_confidence",
+      "split": "train",
+      "side": "fear",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/fear_vs_confidence/train/fear.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "fear_vs_confidence",
+      "split": "train",
+      "side": "confidence",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/fear_vs_confidence/train/confidence.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "love_vs_hate",
+      "split": "train",
+      "side": "love",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/love_vs_hate/train/love.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "love_vs_hate",
+      "split": "train",
+      "side": "hate",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/love_vs_hate/train/hate.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "anxious_vs_relaxed",
+      "split": "train",
+      "side": "anxious",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/anxious_vs_relaxed/train/anxious.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "anxious_vs_relaxed",
+      "split": "train",
+      "side": "relaxed",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/anxious_vs_relaxed/train/relaxed.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "sad_vs_happy",
+      "split": "train",
+      "side": "sad",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/sad_vs_happy/train/sad.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "sad_vs_happy",
+      "split": "train",
+      "side": "happy",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/sad_vs_happy/train/happy.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "angry_vs_calm",
+      "split": "train",
+      "side": "angry",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/angry_vs_calm/train/angry.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "angry_vs_calm",
+      "split": "train",
+      "side": "calm",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/angry_vs_calm/train/calm.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "fear_vs_confidence",
+      "split": "train",
+      "side": "fear",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/fear_vs_confidence/train/fear.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "fear_vs_confidence",
+      "split": "train",
+      "side": "confidence",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/fear_vs_confidence/train/confidence.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "love_vs_hate",
+      "split": "train",
+      "side": "love",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/love_vs_hate/train/love.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "love_vs_hate",
+      "split": "train",
+      "side": "hate",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/love_vs_hate/train/hate.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "anxious_vs_relaxed",
+      "split": "train",
+      "side": "anxious",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/anxious_vs_relaxed/train/anxious.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    },
+    {
+      "pair_key": "anxious_vs_relaxed",
+      "split": "train",
+      "side": "relaxed",
+      "output_file": "/kaggle/working/results/residuals/qwen_4b/anxious_vs_relaxed/train/relaxed.pt",
+      "n_prompts": 15,
+      "residual_shape": [
+        15,
+        37,
+        2560
+      ]
+    }
+  ]
+}
