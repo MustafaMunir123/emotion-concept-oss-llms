@@ -1,4 +1,0 @@
-model_name,split,n_pairs,mean_pair_balanced_accuracy,min_pair_balanced_accuracy,max_pair_balanced_accuracy,mean_pair_avg_margin,mean_overlap_mapped_accuracy,overlap_checks,warnings_count,errors_count
-qwen_4b,train,5,0.9866666666666667,0.9333333333333333,1.0,0.9336668968200683,0.9833333333333334,2,0,0
-mistral_7b,train,5,0.8333333333333334,0.7,0.9333333333333333,0.7062124848365784,0.7666666666666666,2,0,0
-falcon_7b,train,5,0.9666666666666666,0.9,1.0,0.8523595452308654,0.9166666666666667,2,0,0

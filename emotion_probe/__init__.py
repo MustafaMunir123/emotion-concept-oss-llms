@@ -1,2 +1,2 @@
-"""Emotion probe utilities (Heretic-inspired)."""
+"""Emotion probe utilities."""
 

@@ -20,12 +20,10 @@ class ResidualExtractionResult:
 
 
 def batchify(items: list[Any], batch_size: int) -> list[list[Any]]:
-    # Adapted from heretic.utils.batchify().
     return [items[i : i + batch_size] for i in range(0, len(items), batch_size)]
 
 
 def empty_cache() -> None:
-    # Adapted from heretic.utils.empty_cache().
     gc.collect()
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
@@ -63,12 +61,7 @@ def get_residuals(
     model: PreTrainedModel,
     system_prompt: str = "You are a helpful assistant.",
 ) -> Tensor:
-    """
-    Heretic-style residual extraction:
-    - generate one token
-    - read hidden states for first generated token
-    - stack all layers as (prompt, layer, hidden_dim)
-    """
+    """Extract residuals for the first generated token across all layers."""
     chat_prompts = _build_chat_prompts(
         texts=texts,
         tokenizer=tokenizer,

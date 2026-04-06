@@ -23,7 +23,6 @@ class EmotionPair(BaseModel):
 
 
 class Settings(BaseSettings):
-    # Step 0: reproducible project structure and runtime behavior.
     project_root: str = Field(default=".")
     output_root: str = Field(default="outputs")
     data_dir: str = Field(default="data")
@@ -33,7 +32,6 @@ class Settings(BaseSettings):
     seed: int = Field(default=42)
     run_id: str = Field(default="baseline")
 
-    # Step 1: locked model list (from plan).
     models: list[ModelSpec] = Field(
         default=[
             ModelSpec(name="qwen_4b", model_id="Qwen/Qwen3-4B-Instruct-2507"),
@@ -51,14 +49,12 @@ class Settings(BaseSettings):
         ),
     )
 
-    # Runtime and loading knobs.
     device_map: str = Field(default="auto")
     dtypes: list[str] = Field(default=["auto", "float16", "bfloat16", "float32"])
     trust_remote_code: bool | None = Field(default=None)
     max_new_tokens_smoke_test: int = Field(default=1)
     use_fast_tokenizer: bool = Field(default=True)
 
-    # Fixed pair set from plan.
     emotion_pairs: list[EmotionPair] = Field(
         default=[
             EmotionPair(left="sad", right="happy"),
@@ -69,7 +65,6 @@ class Settings(BaseSettings):
         ]
     )
 
-    # Notebook execution constraint.
     execution_mode: Literal["single_notebook"] = Field(default="single_notebook")
 
     @property
@@ -83,7 +78,6 @@ class Settings(BaseSettings):
         if filtered:
             return filtered
 
-        # Helpful error for notebook users.
         choices = ", ".join([f"{m.name} ({m.model_id})" for m in enabled])
         raise ValueError(
             f"selected_model={selected!r} did not match any enabled model. "
@@ -103,9 +97,6 @@ class Settings(BaseSettings):
         dotenv_settings: PydanticBaseSettingsSource,
         file_secret_settings: PydanticBaseSettingsSource,
     ) -> tuple[PydanticBaseSettingsSource, ...]:
-        # Heretic-like source priority:
-        # init args > environment > dotenv > file secrets.
-        # TOML is intentionally omitted for notebook-first Kaggle usage.
         return (
             init_settings,
             EnvSettingsSource(settings_cls, env_prefix="EMOTION_PROBE_"),

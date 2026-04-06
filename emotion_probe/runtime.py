@@ -2,7 +2,7 @@ import os
 
 
 def is_notebook() -> bool:
-    """Notebook detection adapted from heretic.utils.is_notebook()."""
+    """Notebook detection utility."""
     if os.getenv("COLAB_GPU") or os.getenv("KAGGLE_KERNEL_RUN_TYPE"):
         return True
 

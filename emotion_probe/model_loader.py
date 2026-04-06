@@ -18,7 +18,6 @@ from .config import Settings
 def get_model_class(
     model_id: str,
 ) -> Type[AutoModelForImageTextToText] | Type[AutoModelForCausalLM]:
-    # Adapted from heretic.model.get_model_class().
     configs = PretrainedConfig.get_config_dict(model_id)
     if any([("vision_config" in config) for config in configs]):
         return AutoModelForImageTextToText
@@ -39,7 +38,6 @@ def load_tokenizer(model_id: str, settings: Settings) -> PreTrainedTokenizerBase
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-    # Keep Heretic's left-padding safeguard for decoder-only generation.
     tokenizer.padding_side = "left"
     return tokenizer
 
